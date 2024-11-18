@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<courses>
+    <course>
+        <title>Basic Math</title>
+        <description>Master the fundamentals of arithmetic, including addition, subtraction, multiplication, and division.</description>
+    </course>
+    <course>
+        <title>Reading Comprehension</title>
+        <description>Improve your ability to read and understand various types of texts with step-by-step guidance.</description>
+    </course>
+    <course>
+        <title>Science Fundamentals</title>
+        <description>Explore basic science topics, including nature, space, and human biology.</description>
+    </course>
+</courses>
