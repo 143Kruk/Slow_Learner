@@ -1,0 +1,288 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>About Us - Slow Learner Web</title>
+        <!--<link rel="stylesheet" href="style.css">  Link to your external stylesheet -->
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap');
+
+            /* Reset some default styles */
+            * {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+              
+            /* Global styles */
+            body {
+                font-family: 'Montserrat', sans-serif;
+                color: #333;
+                background-color: #fffbf0; /* Soft, light background */
+            }
+
+            /* Header styles */
+            header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 15px;
+                position: sticky;
+                top: 0;
+                z-index: 10000;
+                background: linear-gradient(90deg, #ff6f61, #6fb1fc); /* Vibrant gradient */
+                color: #fff;
+                transition: background 0.3s ease;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            }
+
+            .logo-container {
+                display: flex;
+                align-items: center; /* Center the logo and text vertically */
+            }
+
+            .logo-container img {
+                width: 50px; /* Adjust width as needed */
+                height: auto; /* Maintain aspect ratio */
+                margin-right: 10px; /* Space between logo and text */
+            }
+
+            nav ul {
+                display: flex;
+                list-style-type: none;
+                flex: 1;
+                text-align: right;
+            }
+
+            nav li {
+                margin-left: 20px;
+                display: inline-block;
+            }
+
+            nav a {
+                color: #fff; /* White text for contrast */
+                text-decoration: none;
+                font-size: 0.9rem;
+                text-transform: capitalize;
+                padding: 5px;
+            }
+
+            nav a:hover {
+                background: #ffecb3; /* Soft yellow for hover effect */
+                color: #333; /* Darker text on hover */
+                transition: background 0.3s ease;
+                border-radius: 5px;
+            }
+
+            /* Main Content Styling */
+            main {
+                max-width: 1100px;
+                margin: 40px auto;
+                padding: 20px;
+                background-color: #fff; /* White for contrast */
+                box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
+                border-radius: 12px;
+                transition: transform 0.3s ease;
+            }
+
+            main:hover {
+                transform: translateY(-5px);
+            }
+
+            main h1 {
+                color: #ff6f61; /* Fun coral color */
+                font-size: 2.5rem; /* Main title size */
+                margin-bottom: 15px;
+                text-align: center;
+            }
+
+            main h2 {
+                color: #ff6f61; /* Fun coral color for subheadings */
+                font-size: 2rem; /* Subheading size */
+                margin-bottom: 15px;
+            }
+
+            main p {
+                margin-bottom: 25px;
+                font-size: 1.1rem;
+                color: #555; /* Dark gray for text */
+                text-align: center;
+            
+            }
+
+            main ul {
+                list-style-type: none;
+                padding-left: 0;
+                display: flex;
+                flex-direction: column; /* Stack vertically */
+                gap: 20px; /* Space between items */
+            }
+
+            main ul li {
+                display: flex; /* Use flexbox for alignment */
+                align-items: center;
+                font-size: 1.2rem;
+                position: relative;
+                padding-left: 25px;
+            }
+
+            main ul li::before {
+                content: "\2022";
+                color: #6fb1fc; /* Fun blue color */
+                font-weight: bold;
+                font-size: 1.5rem;
+                position: absolute;
+                left: 0;
+                top: 0;
+            }
+
+            main ul li strong {
+                color: #ff6f61; /* Coral accent for strong text */
+            }
+
+            /* Image Styling */
+            main img {
+                display: block;
+                max-width: 100%; /* Responsive images */
+                height: auto; /* Maintain aspect ratio */
+                margin: 20px auto;
+                border-radius: 8px;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            }
+
+            /* Team Member Image Styling */
+            .team-member img {
+                width: 80px; /* Set width */
+                height: auto; /* Maintain aspect ratio */
+                border-radius: 50%; /* Make images circular */
+                margin-right: 15px; /* Space between image and text */
+                flex-shrink: 0; /* Prevent shrinking */
+            }
+
+            /* Button Styling */
+            button {
+                background-color: #6fb1fc; /* Fun blue button */
+                color: white;
+                padding: 12px 25px;
+                border: none;
+                border-radius: 50px;
+                cursor: pointer;
+                font-size: 1rem;
+                transition: background-color 0.3s ease, transform 0.2s ease;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+                display: block;
+                margin: 20px auto; /* Center the button */
+            }
+
+            button:hover {
+                background-color: #5c9bcf; /* Darker blue on hover */
+                transform: scale(1.05);
+            }
+
+            /* Footer Styling */
+            footer {
+                padding: 20px;
+                background-color: #ff6f61; /* Coral color for footer */
+                color: #ffffff; /* White text */
+                text-align: center;
+                margin-top: 20px;
+                clear: both;
+            }
+
+            footer p {
+                margin: 10px 0;
+            }
+
+            /* Media Query for Responsiveness */
+            @media (max-width: 768px) {
+                nav ul {
+                    flex-direction: column;
+                    gap: 10px;
+                }
+
+                main {
+                    padding: 15px auto;
+                }
+
+                main img {
+                    width: 100%; /* Full width for images on small screens */
+                }
+
+                button {
+                    padding: 10px 20px;
+                    font-size: 0.9rem;
+                }
+
+                main h2 {
+                    font-size: 1.5rem;
+                }
+
+                footer p {
+                    font-size: 0.85rem;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Header Section -->
+        <header>
+            <div class="logo-container">
+                <img src="logo1-removebg-preview.png" alt="Logo of Slow Learners Educational Platform">
+                <h3>Slow Learners</h3>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="about1.html">About Us</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="contact1.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Main Content Section -->
+        <main>
+            <h1>About Us</h1>
+            <p>Welcome to Slow Learner Web! We're here to help you learn at your own pace.</p>
+            <div class="about-us-content">
+                <h2>Our Mission</h2>
+                <p>We believe that everyone learns differently, and that's why we're committed to providing a safe and supportive environment for slow learners.</p>
+                <h2>Our Team</h2>
+
+                <ul>
+                    <li class="team-member">
+                        <img src="team1.jpg" alt="Team Member 1">
+                        <div>
+                            <h3>Thaishin</h3>
+                            <p>Founder & CEO</p>
+                            <p>Thaishin has over 10 years of experience working with slow learners and is passionate about creating personalized learning plans.</p>
+                        </div>
+                    </li>
+                    <li class="team-member">
+                        <img src="team2.jpg" alt="Team Member 2">
+                        <div>
+                            <h3>Alexander</h3>
+                            <p>Co-Founder & CTO</p>
+                            <p>Alexander is a specialist in educational technology and has developed several learning tools for slow learners.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+           
+
+            <!-- Button Section -->
+            <a href="Haru.html">
+            <div id="button-section">
+                <button>Get Started Today!</button>
+            </div>
+        </a>
+        </main>
+
+        <!-- Footer Section -->
+        <footer>
+            <p>&copy; 2024 Slow Learner Web. All rights reserved.</p>
+            <p>Follow us on <a href="#">Social Media</a></p>
+        </footer>
+    </body>
+    </html>
